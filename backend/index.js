@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://bookcollections.onrender.com/",
+    origin: "https://bookcollections.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
