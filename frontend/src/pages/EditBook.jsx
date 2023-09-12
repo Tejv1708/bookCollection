@@ -27,7 +27,7 @@ const EditBook = () => {
         alert("An error happend .Please check console");
         console.log(err);
       });
-  });
+  }, []);
 
   const handleSaveBook = () => {
     const data = {

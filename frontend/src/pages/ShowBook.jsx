@@ -5,16 +5,16 @@ import BackButton from "../components/BackButton";
 import Spinner from "../components/Spinner";
 
 const ShowBook = () => {
-  const [book, setBooks] = useState({});
+  const [book, setBook] = useState({});
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`"http://localhost:5555/books/${id}`)
+      .get(`http://localhost:5555/books/${id}`)
       .then((res) => {
-        setBooks(res.data);
+        setBook(res.data.data);
         setLoading(false);
       })
       .catch((err) => {

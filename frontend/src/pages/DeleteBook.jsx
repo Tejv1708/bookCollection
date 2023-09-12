@@ -10,7 +10,6 @@ const DeleteBook = () => {
   const { id } = useParams();
   const handleDeleteBook = () => {
     setLoading(true);
-
     axios
       .delete(`http://localhost:5555/books/${id}`)
       .then(() => {
@@ -18,7 +17,7 @@ const DeleteBook = () => {
         navigate("/");
       })
       .catch((err) => {
-        console.log(err);
+        setLoading(false);
         alert("An error happend .Please Click console");
         console.log(err);
       });
