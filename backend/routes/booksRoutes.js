@@ -7,7 +7,7 @@ router.post("/", async (req, res) => {
   try {
     if (!req.body.title || !req.body.author || !req.body.publishYear) {
       return res.status(400).send({
-        message: "Send all required frilds : title , author , publishYear",
+        message: "Send all required fields : title , author , publishYear",
       });
     }
 
@@ -57,7 +57,7 @@ router.put("/:id", async (req, res) => {
   try {
     if (!req.body.title || !req.body.author || !req.body.publishYear) {
       return res.status(400).send({
-        message: "Send all required frilds : title , author , publishYear",
+        message: "Send all required fields : title , author , publishYear",
       });
     }
     const { id } = req.params;

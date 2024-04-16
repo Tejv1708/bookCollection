@@ -10,7 +10,7 @@ const app = express();
 // app.use(cors);
 
 // Option 2 : Allow Customer Origins
-
+//"https://bookcollections.onrender.com"
 app.use(
   cors({
     origin: "https://bookcollections.onrender.com",

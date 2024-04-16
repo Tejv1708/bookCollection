@@ -9,6 +9,7 @@ const DeleteBook = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const handleDeleteBook = () => {
+    //https://bookcollection.onrender.com
     setLoading(true);
     axios
       .delete(`https://bookcollection.onrender.com/books/${id}`)

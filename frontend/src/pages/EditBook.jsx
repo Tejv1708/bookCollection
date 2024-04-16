@@ -17,9 +17,9 @@ const EditBook = () => {
     axios
       .get(`https://bookcollection.onrender.com/books/${id}`)
       .then((res) => {
-        setAuthor(res.data.author);
-        setPublishYear(res.data.publishYear);
-        setTitle(res.data.title);
+        setAuthor(res.data.data.author);
+        setPublishYear(res.data.data.publishYear);
+        setTitle(res.data.data.title);
         setLoading(false);
       })
       .catch((err) => {
@@ -28,6 +28,7 @@ const EditBook = () => {
         console.log(err);
       });
   }, []);
+  console.log(title);
 
   const handleSaveBook = () => {
     const data = {
